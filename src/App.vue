@@ -23,7 +23,7 @@
           <v-spacer></v-spacer>
 
             <v-btn text rounded color="white">
-              <router-link to="/login"><span>Sign in</span></router-link>
+              <router-link to="/login"><span style="color:white">Sign in</span></router-link>
             </v-btn>
             <v-btn text rounded color="white">
               <span>Sign up</span>
@@ -32,11 +32,11 @@
         </v-toolbar>
 
         </v-layout>
-        <v-flex>
+        <!-- <v-flex>
         <v-layout row wrap>
           
         </v-layout>
-      </v-flex>
+      </v-flex> -->
       </div>
     
     <v-content>
@@ -44,6 +44,27 @@
       <router-view/>
       <!-- <Registration/> -->
     </v-content>
+    <v-footer
+    height="auto"
+    color="primary "
+  >
+    <v-layout
+      justify-center
+      align-content-space-between="true"
+      row
+      wrap
+    >
+      <v-btn
+        v-for="link in links"
+        :key="link"
+        color="white"
+        text
+        rounded
+      >
+        {{ link }}
+      </v-btn>
+    </v-layout>
+  </v-footer>
   </v-app>
 </template>
 
@@ -60,6 +81,15 @@ export default {
 
   data: () => ({
     //
+    links: [
+        'Home',
+        'About Us',
+        'Team',
+        'Services',
+        'Blog',
+        'Contact Us'
+      ],
+      
   }),
 };
 </script>

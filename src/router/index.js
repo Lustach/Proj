@@ -21,8 +21,13 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('../components/Registration.vue')
-  }
+    component: () => import('../components/Registration.vue'),
+  },
+  {
+    path: '/',
+    name: 'Main',
+    component: () => import('../components/MainBanner.vue'),
+  },
 ]
 
 const router = new VueRouter({
